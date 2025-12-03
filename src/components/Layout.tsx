@@ -109,6 +109,18 @@ function Navigation() {
           fontWeight: '500',
           transition: 'all 0.3s ease',
         }}
+        onMouseEnter={(e) => {
+          if (!isActive('/')) {
+            e.currentTarget.style.background = 'var(--glass-bg)';
+            e.currentTarget.style.color = 'var(--accent-primary)';
+          }
+        }}
+        onMouseLeave={(e) => {
+          if (!isActive('/')) {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+          }
+        }}
       >
         Home
       </Link>
@@ -124,6 +136,18 @@ function Navigation() {
           fontSize: '14px',
           fontWeight: '500',
           transition: 'all 0.3s ease',
+        }}
+        onMouseEnter={(e) => {
+          if (!isActive('/experience')) {
+            e.currentTarget.style.background = 'var(--glass-bg)';
+            e.currentTarget.style.color = 'var(--accent-primary)';
+          }
+        }}
+        onMouseLeave={(e) => {
+          if (!isActive('/experience')) {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+          }
         }}
       >
         Experience
@@ -141,6 +165,18 @@ function Navigation() {
           fontWeight: '500',
           transition: 'all 0.3s ease',
         }}
+        onMouseEnter={(e) => {
+          if (!isActive('/work')) {
+            e.currentTarget.style.background = 'var(--glass-bg)';
+            e.currentTarget.style.color = 'var(--accent-primary)';
+          }
+        }}
+        onMouseLeave={(e) => {
+          if (!isActive('/work')) {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+          }
+        }}
       >
         Work
       </Link>
@@ -157,6 +193,18 @@ function Navigation() {
           fontWeight: '500',
           transition: 'all 0.3s ease',
         }}
+        onMouseEnter={(e) => {
+          if (!isActive('/about')) {
+            e.currentTarget.style.background = 'var(--glass-bg)';
+            e.currentTarget.style.color = 'var(--accent-primary)';
+          }
+        }}
+        onMouseLeave={(e) => {
+          if (!isActive('/about')) {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+          }
+        }}
       >
         About
       </Link>
@@ -172,6 +220,18 @@ function Navigation() {
           fontSize: '14px',
           fontWeight: '500',
           transition: 'all 0.3s ease',
+        }}
+        onMouseEnter={(e) => {
+          if (!isActive('/contact')) {
+            e.currentTarget.style.background = 'var(--glass-bg)';
+            e.currentTarget.style.color = 'var(--accent-primary)';
+          }
+        }}
+        onMouseLeave={(e) => {
+          if (!isActive('/contact')) {
+            e.currentTarget.style.background = 'transparent';
+            e.currentTarget.style.color = 'var(--text-secondary)';
+          }
         }}
       >
         Contact

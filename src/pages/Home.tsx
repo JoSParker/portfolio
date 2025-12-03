@@ -107,7 +107,7 @@ export default function Home() {
               textAlign: 'left',
             }}
           >
-            Hi! I'm John Samuel, a 3rd year undergrad and a full stack developer and ML enthusiast building innovative solutions at the intersection of technology, sports, and music, driven by my passion for both fields.
+            Hi! I'm John Samuel, a 3rd year undergrad and a full stack developer and ML enthusiast. I go by the name JosParker online, building innovative solutions at the intersection of technology, sports, and music, driven by my passion for both fields.
           </p>
           {/* Stats Cards */}
           <div 
