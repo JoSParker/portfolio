@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Experience() {

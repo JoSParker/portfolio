@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, Calendar, MapPin, Coffee, Music, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { FaPython, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
-import { SiTypescript, SiMongodb, SiTensorflow, SiNextdotjs } from 'react-icons/si';
+import { SiTypescript, SiTensorflow } from 'react-icons/si';
 
 export default function About() {
   const skills = [
