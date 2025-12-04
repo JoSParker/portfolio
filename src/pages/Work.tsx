@@ -11,7 +11,7 @@ export default function Work() {
       title: "Chronica",
       year: "2024",
       tags: ["TypeScript", "Time Tracking", "Productivity"],
-      image: "C:/Users/DELL/Desktop/Area 51/Portfolio/public/Screenshot 2025-09-27 031900.pnghttps://images.unsplash.com/photo-1501139083538-0139583c060f?q=80&w=2670&auto=format&fit=crop",
+      image: "/Screenshot 2025-09-27 031900.png",
       link: "https://github.com/JoSParker/Chronica",
       description: "Time tracking and productivity tool",
       stars: 12
