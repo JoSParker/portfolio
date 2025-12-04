@@ -44,7 +44,7 @@ export default function About() {
   const funFacts = [
     { icon: <Music size={24} />, text: "I make music (though I admit, it's pretty bad!)" },
     { icon: <Trophy size={24} />, text: "Passionate about Football and Cricket analytics" },
-    { icon: <Coffee size={24} />, text: "Coffee enthusiast - fueling late-night coding sessions" },
+    
     { icon: <MapPin size={24} />, text: "Based in India, working on global projects" },
   ];
 
