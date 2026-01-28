@@ -424,8 +424,8 @@ export default function Home() {
 
             <AnimatedSection delay={200}>
               <div className="flex flex-col gap-6 items-center">
-                <a className="contact-link text-3xl md:text-5xl lg:text-6xl font-light text-white/40 serif-title italic" href="mailto:josparker@email.com">
-                  josparker@email.com
+                <a className="contact-link text-3xl md:text-5xl lg:text-6xl font-light text-white/40 serif-title italic" href="mailto:jsamuelp181@gmail.com">
+                  jsamuelp181@gmail.com
                 </a>
                 <div className="flex gap-8 mt-8">
                   <a className="contact-link text-sm uppercase tracking-[0.3em] text-white/40" href="https://www.linkedin.com/in/john-samuel-p-22b6a629b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -437,11 +437,11 @@ export default function Home() {
 
             <AnimatedSection delay={400}>
               <div className="mt-24">
-                <button className="floating-cta group relative flex items-center justify-center px-10 py-5 bg-white text-black rounded-full transition-all duration-500 hover:scale-105 hover:pr-14">
+                <a href="mailto:jsamuelp181@gmail.com?subject=Hello%20from%20your%20Portfolio" className="floating-cta group relative flex items-center justify-center px-10 py-5 bg-white text-black rounded-full transition-all duration-500 hover:scale-105 hover:pr-14">
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Send a Message</span>
                   <span className="material-symbols-outlined absolute right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">chat_bubble</span>
                   <div className="absolute inset-0 rounded-full bg-white blur-md opacity-20 animate-pulse"></div>
-                </button>
+                </a>
               </div>
             </AnimatedSection>
           </div>
