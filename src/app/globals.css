@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #0a0a0a;
+  --text-main: #e5e5e5;
+  --accent: #fff;
+  --noise-url: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUONpAevk7bzzhX3uAFJcpGrpBA5iY2y-o3Hwr92Jo5--7Iw3ImItuTOlIAJxkB3suBvvvlBy76xUxejebSxp0p_mEb9hOScQ0k5JVBnLHSy57kT8yEKrt8QugWvHCVpWEfeixNZ_IPXA37lOveYyYP5EjxshUOgxo6FYMDWqN65RVUYluxKW5YBEMkkqLp5mFZJYe18XNWyOcEGb8QzR3RyxPEtj8YMxHFM7Oe4iE0l9W-GjTMx2BwmzeXiyCVTlIBHoapVxj9Zc');
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+.grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--noise-url);
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.serif-title {
+  font-family: "Playfair Display", serif;
+}
+
+.sans-role {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.4em;
+}
+
+.sans-bold {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.liquid-hover:hover {
+  filter: contrast(1.2) brightness(1.1);
+  transition: filter 0.5s ease;
+}
+
+.floating-cta {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.scroll-text-anim {
+  animation: scroll-vertical 30s linear infinite;
+}
+
+/* Works page styles */
+.project-item:hover .project-preview {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-preview {
+  pointer-events: none;
+  position: fixed;
+  width: 400px;
+  height: 250px;
+  z-index: 30;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.project-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--noise-url);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.project-link:hover .project-text {
+  color: #fff;
+  transform: translateX(20px);
+}
+
+.project-text {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Skills page styles */
+.dust-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dust-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.research-card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.research-card:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+  padding-left: 1rem;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+/* Contact page styles */
+.timeline-line {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.timeline-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -2.5px;
+  top: 0.5rem;
+}
+
+.contact-link {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-link:hover {
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transform: translateX(10px);
+}
+
+/* Hover text glow effect */
+.hover-text-glow:hover {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.1);
+}
+
+/* Menu link hover */
+.menu-link {
+  position: relative;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/* Background color for menu */
+.bg-bg-dark {
+  background-color: #0a0a0a;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
