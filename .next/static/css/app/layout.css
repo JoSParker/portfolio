@@ -843,12 +843,16 @@ video {
 .bg-white\/20 {
   background-color: rgb(255 255 255 / 0.2);
 }
-.bg-white\/\[0\.02\] {
-  background-color: rgb(255 255 255 / 0.02);
+.bg-white\/\[0\.04\] {
+  background-color: rgb(255 255 255 / 0.04);
 }
 .bg-zinc-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#141414\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity, 1));
 }
 .bg-\[radial-gradient\(circle_at_center\2c _var\(--tw-gradient-stops\)\)\] {
   background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
@@ -1107,7 +1111,8 @@ video {
 }
 
 :root {
-  --bg-dark: #0f0f0f;
+  --bg-dark: #0c0c0c;
+  --bg-dark-light: #141414;
   --text-main: #f0f0f0;
   --accent: #fff;
   --noise-url: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUONpAevk7bzzhX3uAFJcpGrpBA5iY2y-o3Hwr92Jo5--7Iw3ImItuTOlIAJxkB3suBvvvlBy76xUxejebSxp0p_mEb9hOScQ0k5JVBnLHSy57kT8yEKrt8QugWvHCVpWEfeixNZ_IPXA37lOveYyYP5EjxshUOgxo6FYMDWqN65RVUYluxKW5YBEMkkqLp5mFZJYe18XNWyOcEGb8QzR3RyxPEtj8YMxHFM7Oe4iE0l9W-GjTMx2BwmzeXiyCVTlIBHoapVxj9Zc');
@@ -1342,8 +1347,8 @@ html {
 .hover\:bg-white\/40:hover {
   background-color: rgb(255 255 255 / 0.4);
 }
-.hover\:bg-white\/\[0\.05\]:hover {
-  background-color: rgb(255 255 255 / 0.05);
+.hover\:bg-white\/\[0\.07\]:hover {
+  background-color: rgb(255 255 255 / 0.07);
 }
 .hover\:pr-14:hover {
   padding-right: 3.5rem;
@@ -1419,6 +1424,9 @@ html {
 }
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+.group:hover .group-hover\:opacity-0 {
+  opacity: 0;
 }
 @media (min-width: 768px) {
 

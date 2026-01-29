@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'    
 
 // Custom hook for scroll animations
 function useScrollAnimation() {
@@ -141,7 +141,7 @@ export default function Home() {
       <section id="hero" className="min-h-screen flex items-center justify-center px-6 lg:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 w-full max-w-7xl items-center gap-12">
           <AnimatedSection className="lg:col-span-4 z-10">
-            <h1 className="serif-title leading-[1] text-white relative h-[80px] md:h-[90px] lg:h-[100px] overflow-hidden">
+            <h1 className="serif-title leading-[1] text-white relative h-[80px] md:h-[90px] lg:h-[100px]">
               <span 
                 className="absolute inset-0 flex items-center text-4xl md:text-5xl lg:text-6xl font-mono hover-text-glow transition-all duration-700 hover:tracking-wide cursor-default hover:text-white/80"
                 style={{
@@ -173,8 +173,15 @@ export default function Home() {
             <div className="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 border border-white/5">
               <Image
                 alt="JosParker Profile"
-                className="w-full h-full object-cover object-top liquid-hover transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover object-top transition-all duration-700 group-hover:opacity-0"
                 src="/profile.jpg"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <Image
+                alt="JosParker Profile Coloured"
+                className="w-full h-full object-cover object-top transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+                src="/profile-coloured.png"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -206,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="min-h-screen pt-40 pb-32 px-6 lg:px-24 border-t border-white/5">
+      <section id="experience" className="min-h-screen pt-40 pb-32 px-6 lg:px-24 border-t border-white/5 bg-[#141414]">
         <div className="max-w-7xl mx-auto w-full">
           <AnimatedSection>
             <header className="mb-24">
@@ -339,11 +346,11 @@ export default function Home() {
       </section>
 
       {/* Tools Section */}
-      <section id="tools" className="relative pt-32 pb-32 px-6 lg:px-32 max-w-screen-2xl mx-auto border-t border-white/5">
-        <div className="relative z-10">
+      <section id="tools" className="relative pt-32 pb-32 px-6 lg:px-32 border-t border-white/5 bg-[#141414]">
+        <div className="max-w-screen-2xl mx-auto relative z-10">
           <AnimatedSection>
             <header className="mb-16">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb- 4">
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/40">Stack</span>
                 <div className="w-12 h-[1px] bg-white/10 hover:w-20 hover:bg-white/30 transition-all duration-500"></div>
               </div>
@@ -356,7 +363,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Frontend */}
             <AnimatedSection delay={100}>
-              <div className="group relative p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500">
+              <div className="group relative p-8 border border-white/5 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/10 transition-all duration-500">
                 <div className="absolute top-0 left-0 w-8 h-8 border-l border-t border-white/10 group-hover:border-white/30 group-hover:w-12 group-hover:h-12 transition-all duration-500"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-r border-b border-white/10 group-hover:border-white/30 group-hover:w-12 group-hover:h-12 transition-all duration-500"></div>
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-6 block">01</span>
@@ -374,7 +381,7 @@ export default function Home() {
 
             {/* Backend */}
             <AnimatedSection delay={200}>
-              <div className="group relative p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500">
+              <div className="group relative p-8 border border-white/5 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/10 transition-all duration-500">
                 <div className="absolute top-0 left-0 w-8 h-8 border-l border-t border-white/10 group-hover:border-white/30 group-hover:w-12 group-hover:h-12 transition-all duration-500"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-r border-b border-white/10 group-hover:border-white/30 group-hover:w-12 group-hover:h-12 transition-all duration-500"></div>
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-6 block">02</span>
@@ -392,7 +399,7 @@ export default function Home() {
 
             {/* Tools & ML */}
             <AnimatedSection delay={300}>
-              <div className="group relative p-8 border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500">
+              <div className="group relative p-8 border border-white/5 bg-white/[0.04] hover:bg-white/[0.07] hover:border-white/10 transition-all duration-500">
                 <div className="absolute top-0 left-0 w-8 h-8 border-l border-t border-white/10 group-hover:border-white/30 group-hover:w-12 group-hover:h-12 transition-all duration-500"></div>
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-r border-b border-white/10 group-hover:border-white/30 group-hover:w-12 group-hover:h-12 transition-all duration-500"></div>
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-6 block">03</span>
